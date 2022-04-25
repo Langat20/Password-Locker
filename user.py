@@ -6,6 +6,14 @@ class User:
     '''
     user_list = []
     
-    
-    
+    def __init__(self, username, password):
+        '''
+        initialization method to define user object properties
+        args: 
+        username: name of the user 
+        password: user's password 
+        '''
+        self.username = username
+        self.password = password
+        
         
