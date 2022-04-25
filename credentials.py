@@ -5,7 +5,7 @@ import string and random modules into the file
 '''
 class Credential:
     '''
-    class blueprint to creat instances of credentials
+    class blueprint to create instances of credentials
     '''
     
     credential_list = []
@@ -65,10 +65,4 @@ class Credential:
     @classmethod
     def save_new_credential(self):
         Credential.credential_list.append(self)
-    
-  
-        
-        
-        
-        
     
