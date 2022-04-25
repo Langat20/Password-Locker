@@ -53,6 +53,23 @@ class TestCredentials(unittest.TestCase):
         new_credential.save_credential()
         self.assertEqual(len(Credential.display_credentials("langat")), 3)
         
+    def test_credential_exist(self):
+        
+        '''
+        Test to check if we can return a boolean if we can't find the credential
+        '''
+
+        # Save the new credential
+        self.new_credential.save_credential()
+
+        test_credential = Credential("Evans", "langat", "gmail", "Wr673fts")
+
+        test_credential.save_credential()
+        
+        # use contact exist method
+        credential_exists = Credential.credential_exist("gmail")
+        
+        self.assertTrue(credential_exists)
         
    
         
