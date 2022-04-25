@@ -36,6 +36,13 @@ class TestCredentials(unittest.TestCase):
         test_credential.save_credential()
         self.assertEqual(len(Credential.credential_list), 2)
         
+    def test_generate_passwords(self):
+        '''
+        To test of the generated password is valid to log into user credentials 
+        '''
+        test_generated_password=self.new_credential.generate_password()
+        self.assertEqual(len(test_generated_password), 6)
+        
     
         
 if __name__ == "__main__":
