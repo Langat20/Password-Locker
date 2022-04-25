@@ -51,7 +51,12 @@ def create_generated_password(name):
     password=Credential.generate_password()
     return password
 
-    
+def main():
+    '''
+    Function to run the accounts safe
+    '''
+    print('''welcome to password locker app \n
+          Use these short codes to navigate through the app.''')
     
     
     
