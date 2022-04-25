@@ -18,4 +18,11 @@ class test_user(unittest.TestCase):
     def tearDown(self):
         User.user_list=[]
         
-    
+    def test_init(self):
+        '''
+        to test whether the user object is properly initialized
+        '''
+        self.assertEqual(self.new_user.username, "Evans")
+        self.assertEqual(self.new_user.password, "langat")
+        
+   
