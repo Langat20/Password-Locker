@@ -43,7 +43,18 @@ class TestCredentials(unittest.TestCase):
         test_generated_password=self.new_credential.generate_password()
         self.assertEqual(len(test_generated_password), 6)
         
-    
+    def test_display_credentials(self):
+        
+        #save the new credantial created 
+        self.new_credential.save_credential()
+        test_credential=Credential("Evans", "langat", "gmail", "Wr673fts")
+        test_credential.save_credential()
+        new_credential = Credential("Evans", "langat", "twitter", "Uy67tye")
+        new_credential.save_credential()
+        self.assertEqual(len(Credential.display_credentials("langat")), 3)
+        
+        
+   
         
 if __name__ == "__main__":
     unittest.main()
