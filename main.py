@@ -26,7 +26,32 @@ def user_log_in(name, passcode):
     if log_in !=False:
         return User.log_in(name, passcode)
     
+def display_users():
+    '''
+    Method that returns all saved users at a given point in time 
+    '''
+    return User.display_user()
 
+def create_credential(passcode, name, password):
+    
+    new_credential = Credential(passcode, name, password)
+    return new_credential
+
+def save_credentials(credential):
+    credential.save_credential()
+
+def check_existing_credential(name):
+    return Credential.credential_exist(name)
+
+def display_credentials(password):
+    return Credential.display_credentials(password)
+
+def create_generated_password(name):
+    
+    password=Credential.generate_password()
+    return password
+
+    
     
     
     
